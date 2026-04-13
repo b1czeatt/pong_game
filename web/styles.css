@@ -1,0 +1,72 @@
+:root {
+  --bg-start: #0b1020;
+  --bg-end: #1a2b4f;
+  --panel: rgba(255, 255, 255, 0.08);
+  --panel-border: rgba(255, 255, 255, 0.18);
+  --text: #f5f7ff;
+  --accent: #6ce0ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 10%, #223d77 0%, transparent 35%),
+    radial-gradient(circle at 90% 95%, #274368 0%, transparent 30%),
+    linear-gradient(160deg, var(--bg-start), var(--bg-end));
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.layout {
+  width: min(95vw, 980px);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  backdrop-filter: blur(4px);
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+}
+
+.hint {
+  margin: 0 0 15px;
+  color: #d1ddff;
+}
+
+canvas {
+  width: min(92vw, 900px);
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, #091222, #0f1f3c);
+}
+
+@media (max-width: 600px) {
+  .layout {
+    padding: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .hint {
+    font-size: 0.9rem;
+  }
+}
